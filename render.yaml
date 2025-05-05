@@ -1,2 +1,22 @@
+<<<<<<< HEAD
 # This file is no longer needed since the dashboard is deployed on Netlify.
 # You can safely delete this file to avoid confusion.
+=======
+services:
+  - type: web
+    name: backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    postDeployCommands:
+      - npx sequelize-cli db:migrate
+      - npx sequelize-cli db:seed:all
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase: your_database_name
+      - key: SAFEDRIVE_API_KEY
+        value: safedrive_secret_key
+>>>>>>> 00252c9 (Push backend changes)
