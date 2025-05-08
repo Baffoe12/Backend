@@ -1,7 +1,0 @@
-[submodule "backend"]
-    path = backend
-    url = https://github.com/Baffoe12/Backend
-
-[submodule "dashboard"]
-    path = dashboard
-    url = https://github.com/Baffoe12/Safedrive-frontend.git
